@@ -1,5 +1,5 @@
 import java.util.Date;
-import java.util.Arrays;
+
 /**
  * A fix-sized array of students
  * array length should always be equal to the number of stored elements
@@ -26,97 +26,37 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student[] getStudents() {
 		// Add your implementation here
-		
-		return this.students;
+		return null;
 	}
 
 	@Override
 	public void setStudents(Student[] students) {
 		// Add your implementation here
-
-		if(students==null){
-			throw new IllegalArgumentException();
-		}
-		else{
-			this.students=students;
-		}
 	}
 
 	@Override
 	public Student getStudent(int index) {
-		if(index<=0 || index>=this.students.length){
-			throw new IllegalArgumentException();
-		}
-		else{
-		return this.students[index];
-		}
+		// Add your implementation here
+		return null;
 	}
 
 	@Override
 	public void setStudent(Student student, int index) {
-		if(students==null){
-			throw new IllegalArgumentException();
-		}
-		if(index<=0 || index>=this.students.length){
-			throw new IllegalArgumentException();
-		}
-		else{
-			this.students[index]=student;
-		}
 		// Add your implementation here
 	}
 
 	@Override
 	public void addFirst(Student student) {
-		if(student==null){
-			throw new IllegalArgumentException();
-		}
-		else{
-			Student[] x= new Student[this.students.length+1];
-			x[0]=student;
-			int j=0;
-			for(int i=1;i<=this.students.length;i++) {
-			x[i]=this.students[j];
-			j++;
-			}
-			this.students = new Student[x.length];
-			this.students = x;
-}
-		
 		// Add your implementation here
 	}
 
 	@Override
 	public void addLast(Student student) {
-		if(student == null) {
-		throw new IllegalArgumentException();
-		}
-		else {
-			Student[] x= new Student[this.students.length+1];
-			x[this.students.length-1]=student;
-	
-			x[this.students.length]=this.students[this.students.length-1];
-				x[this.students.length+1]= this.students[this.students.length];
-				this.students = new Student[x.length];
-			this.students = x;
-}
 		// Add your implementation here
 	}
 
 	@Override
 	public void add(Student student, int index) {
-		if(index<0 || index>=this.students.length || student == null) {
-			throw new IllegalArgumentException();
-			}
-		else {
-			Student[] x= new Student[this.students.length+1];
-			x[index]=student;
-			for(int i=index;i<this.students.length;i++) {
-		x[i+1]=this.students[i];
-		}
-		this.students = new Student[x.length];
-		this.students = x;
-}
 		// Add your implementation here
 	}
 
